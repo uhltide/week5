@@ -1,0 +1,857 @@
+<html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Chu's China Bistro</title>
+    <link rel="icon" href="images/restaurant-logo-favicon.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/restaurant.css">
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+  <body ng-app="restaurant" ng-strict-di="" class="ng-scope">
+
+    <!-- Fixed position loading indicator -->
+    <loading class="loading-indicator ng-isolate-scope"><!-- ngIf: $ctrl.show --></loading>
+
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a href="index.html" class="pull-left visible-md visible-lg">
+              <div id="logo-img" alt="Logo image"></div>
+            </a>
+
+            <div class="navbar-brand">
+              <a href="index.html"><h1>David Chu's China Bistro</h1></a>
+              <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification">
+              <span>Kosher Certified</span>
+              </p>
+            </div>
+
+            <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div id="collapsable-nav" class="collapse navbar-collapse">
+            <ul id="nav-list" class="nav navbar-nav navbar-right">
+              <li id="navHomeButton" class="visible-xs">
+                <a href="index.html">
+                  <span class="glyphicon glyphicon-home"></span> Home</a>
+              </li>
+              <li id="navMenuButton" ui-sref-active="active">
+                <a ui-sref="public.menu" href="#/menu">
+                  <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+              </li>
+              <li>
+                <a ui-sref="public.about" href="#/about">
+                  <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+              </li>
+              <li>
+                <a ui-sref="public.awards" href="#/awards">
+                  <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
+              </li>
+              <li id="phone" class="hidden-xs">
+                <a href="tel:410-602-5008">
+                  <span>410-602-5008</span></a><div>* We Deliver</div>
+              </li>
+            </ul><!-- #nav-list -->
+          </div><!-- .collapse .navbar-collapse -->
+        </div><!-- .container -->
+      </nav><!-- #header-nav -->
+    </header>
+
+    <div id="call-btn" class="visible-xs">
+      <a class="btn" href="tel:410-602-5008">
+        <span class="glyphicon glyphicon-earphone"></span>
+        410-602-5008
+      </a>
+    </div>
+    <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+
+    <!-- uiView: --><ui-view class="ng-scope"><!--
+  Include stylesheet specific to the public site
+-->
+<link rel="stylesheet" href="css/public.css" class="ng-scope">
+
+<!-- uiView: --><ui-view class="ng-scope"><div class="container ng-scope">
+  <h2 id="menu-categories-title" class="text-center ng-binding">
+    Sushi Menu
+  </h2>
+  <div class="text-center ng-binding">
+    Contains raw ingredients. Consuming raw or undercooked meat, poultry, or seafood may increase your risk of food borne illness.
+  </div>
+
+  <!-- ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR2</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR2.jpg" alt="Asparagus Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR2.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $6.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Asparagus Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR3</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR3.jpg" alt="Avocado Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR3.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $6.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Avocado Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR5</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR5.jpg" alt="California  Roll" src="https://www.davidchuschinabistro.com/images/SR5.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">California  Roll</h3>
+      <p class="menu-item-details ng-binding">Crab meat, avocado and cucumber</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR1</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR1.jpg" alt="Cucumber Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR1.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $5.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Cucumber Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR9</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR9.jpg" alt="Salmon Skin &amp; Cucumber Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR9.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Salmon Skin &amp; Cucumber Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR11</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR11.jpg" alt="Salmon and Avocado Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR11.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Salmon and Avocado Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR6</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR6.jpg" alt="Salmon Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR6.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $6.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Salmon Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR13</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR13.jpg" alt="Spicy Tuna Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR13.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Spicy Tuna Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">With green onions</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR7</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR7.jpg" alt="Tuna Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR7.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $6.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Tuna Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR10</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR10.jpg" alt="Tuna and Avocado Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR10.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Tuna and Avocado Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR12</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR12.jpg" alt="Yellowtail and Avocado Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR12.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Yellowtail and Avocado Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR8</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR8.jpg" alt="Yellowtail  Roll" src="https://www.davidchuschinabistro.com/images/SR8.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Yellowtail  Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR25</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR25.jpg" alt="Salmon Sashimi" src="https://www.davidchuschinabistro.com/images/SR25.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $2.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Salmon Sashimi</h3>
+      <p class="menu-item-details ng-binding"></p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR26</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR26.jpg" alt="Tuna Sashimi" src="https://www.davidchuschinabistro.com/images/SR26.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $2.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Tuna Sashimi</h3>
+      <p class="menu-item-details ng-binding"></p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR27</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR27.jpg" alt="Yellowtail Sashimi" src="https://www.davidchuschinabistro.com/images/SR27.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $2.75 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Yellowtail Sashimi</h3>
+      <p class="menu-item-details ng-binding"></p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR28</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR28.jpg" alt="Imitation Crab Stick Sashimi" src="https://www.davidchuschinabistro.com/images/SR28.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $2.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Imitation Crab Stick Sashimi</h3>
+      <p class="menu-item-details ng-binding"></p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR34</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR34.jpg" alt="Alaska Roll" src="https://www.davidchuschinabistro.com/images/SR34.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $14.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Alaska Roll</h3>
+      <p class="menu-item-details ng-binding">Crispy fried crab stick topped with smoked salmon, cucumber and spicy mayog</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR30</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR30.jpg" alt="Double Happiness" src="https://www.davidchuschinabistro.com/images/SR30.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $15.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Double Happiness</h3>
+      <p class="menu-item-details ng-binding">Salmon, tuna, cucumber inside, topped with avocado.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR37</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR37.jpg" alt="Dragon Roll" src="https://www.davidchuschinabistro.com/images/SR37.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $14.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Dragon Roll</h3>
+      <p class="menu-item-details ng-binding">California roll topped with seared tuna and yellowtail.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR15</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR15.jpg" alt="Fried Sweet Potato Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR15.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Fried Sweet Potato Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR29</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR29.jpg" alt="Garden Salad" src="https://www.davidchuschinabistro.com/images/SR29.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Garden Salad</h3>
+      <p class="menu-item-details ng-binding">Sliced cucumber, lettuce, shiitake mushroom, red pepper with sliced avocado and sesame seed on top.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR32</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR32.jpg" alt="Love Roll" src="https://www.davidchuschinabistro.com/images/SR32.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $15.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Love Roll</h3>
+      <p class="menu-item-details ng-binding">spicy tuna roll topped with tuna.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR36</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR36.jpg" alt="Orioles" src="https://www.davidchuschinabistro.com/images/SR36.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $14.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Orioles</h3>
+      <p class="menu-item-details ng-binding">Spicy tuna, avocado topped with seared salmon and spicy mayo.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR16</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR16.jpg" alt="Philadelphia Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR16.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Philadelphia Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">Smoked Salmon, Tofu Cream Cheese &amp; Cucumber.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR35</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR35.jpg" alt="Rainbow Roll" src="https://www.davidchuschinabistro.com/images/SR35.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $14.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Rainbow Roll</h3>
+      <p class="menu-item-details ng-binding">California roll topped with tuna, salmon, avocado.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR24</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR24.jpg" alt="Salmon Tartar Temaki Roll" src="https://www.davidchuschinabistro.com/images/SR24.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $9.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Salmon Tartar Temaki Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR41</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR41.jpg" alt="Sashimi Combo" src="https://www.davidchuschinabistro.com/images/SR41.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $21.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Sashimi Combo</h3>
+      <p class="menu-item-details ng-binding">4 tuna, 3 salmon, 3 yellowtail</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR43</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR43.jpg" alt="Sashimi Maki Combo" src="https://www.davidchuschinabistro.com/images/SR43.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $17.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Sashimi Maki Combo</h3>
+      <p class="menu-item-details ng-binding">6 pieces of sashimi with a California roll.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR14</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR14.jpg" alt="Spicy Salmon Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR14.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Spicy Salmon Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">Chopped up salmon with some green onions</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR42</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR42.jpg" alt="Sushi Sashimi Combo" src="https://www.davidchuschinabistro.com/images/SR42.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $32.95 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Sushi Sashimi Combo</h3>
+      <p class="menu-item-details ng-binding">9 pieces sashimi with 8 pieces sushi &amp; a California roll.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR18</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR18.jpg" alt="Teriyaki Tuna Cooked Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR18.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $9.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Teriyaki Tuna Cooked Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">Cooked tuna roll with teriyaki sauce on top.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR20</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR20.jpg" alt="Tiriyaki Combo Cooked Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR20.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $10.25 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Tiriyaki Combo Cooked Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">Cooked salmon and tuna</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR33</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR33.jpg" alt="Volcano Roll" src="https://www.davidchuschinabistro.com/images/SR33.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $15.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Volcano Roll</h3>
+      <p class="menu-item-details ng-binding">Baked California Roll topped with spicy tuna &amp; spicy mayo.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR23</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR23.jpg" alt="Yellowtail Avocado Temaki Roll" src="https://www.davidchuschinabistro.com/images/SR23.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $8.25 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Yellowtail Avocado Temaki Roll</h3>
+      <p class="menu-item-details ng-binding">Hand roll</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR21</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR21.jpg" alt="Tuna and Cucumber Temaki Hand Roll" src="https://www.davidchuschinabistro.com/images/SR21.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $8.25 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Tuna and Cucumber Temaki Hand Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR22</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR22.jpg" alt="Salmon Skin and Cucumber Temaki Roll" src="https://www.davidchuschinabistro.com/images/SR22.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $8.25 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Salmon Skin and Cucumber Temaki Roll</h3>
+      <p class="menu-item-details ng-binding">/</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR17</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR17.jpg" alt="Salmon Tempura Cooked Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR17.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $10.25 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Salmon Tempura Cooked Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">Crispy fried salmon topped with scallions and mayo.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR19</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR19.jpg" alt="Teriyaki Salmon Cooked Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR19.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $9.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Teriyaki Salmon Cooked Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">Cooked salmon with teriyaki sauce on top.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR38</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR38.jpg" alt="Blossom Roll" src="https://www.davidchuschinabistro.com/images/SR38.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $15.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Blossom Roll</h3>
+      <p class="menu-item-details ng-binding">Tuna, salmon, yellowtail, imitation crabmeat rolled with cucumber.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR40</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR40.jpg" alt="Festival Roll" src="https://www.davidchuschinabistro.com/images/SR40.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $17.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Festival Roll</h3>
+      <p class="menu-item-details ng-binding">Tuna, yellowtail, salmon, imitation crabmeat, red pepper and asparagus. (10 pieces)</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR4</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR4.jpg" alt="Garden Vegetable Sushi Roll" src="https://www.davidchuschinabistro.com/images/SR4.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $7.50 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Garden Vegetable Sushi Roll</h3>
+      <p class="menu-item-details ng-binding">Cucumber, Asparagus, Red Pepper, Shiitake Mushroom.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR39</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR39.jpg" alt="Golden Dragon Roll" src="https://www.davidchuschinabistro.com/images/SR39.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $15.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Golden Dragon Roll</h3>
+      <p class="menu-item-details ng-binding">Imitation crabmeat, avocado, cucumber, tofu cream cheese. (deep fried)</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">SR31</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/SR31.jpg" alt="Las Vegas Roll" src="https://www.davidchuschinabistro.com/images/SR31.jpg">
+      </div>
+      <div class="menu-item-price ng-binding"><span class="ng-binding"> </span> $16.00 <span class="ng-binding"></span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Las Vegas Roll</h3>
+      <p class="menu-item-details ng-binding">Salmon, cucumber, avocado and tofu cream cheese inside, topped with spicy mayo, teriyaki sauce and scallions. (deep fried)</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items -->
+
+
+</div>
+</ui-view>
+</ui-view>
+
+    <footer class="panel-footer">
+      <div class="container">
+        <div class="row">
+          <section id="hours" class="col-sm-4">
+            <span>Hours:</span><br>
+            Sun-Thurs: 11:15am - 10:00pm<br>
+            Fri: 11:15am - 2:30pm<br>
+            Saturday Closed
+            <hr class="visible-xs">
+          </section>
+          <section id="address" class="col-sm-4">
+            <span>Address:</span><br>
+            7105 Reisterstown Road<br>
+            Baltimore, MD 21215
+            <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+            <hr class="visible-xs">
+          </section>
+          <section id="testimonials" class="col-sm-4">
+            <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+            <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+          </section>
+        </div>
+        <div class="text-center">
+          © Copyright David Chu's China Bistro 2016 |
+          <a ui-sref="admin.auth" href="#/admin">Admin</a></div>
+      </div>
+    </footer>
+
+    <!-- Libs -->
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="lib/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="lib/ng-file-upload/ng-file-upload.min.js"></script>
+
+    <!-- Main Restaurant Module -->
+    <script src="src/restaurant.module.js"></script>
+
+    <!-- Common Module -->
+    <script src="src/common/common.module.js"></script>
+    <script src="src/common/loading/loading.component.js"></script>
+    <script src="src/common/loading/loading.interceptor.js"></script>
+    <script src="src/common/menu.service.js"></script>
+
+    <!-- Public Module -->
+    <script src="src/public/public.module.js"></script>
+    <script src="src/public/public.routes.js"></script>
+    <script src="src/public/menu/menu.controller.js"></script>
+    <script src="src/public/menu-category/menu-category.component.js"></script>
+    <script src="src/public/menu-items/menu-items.controller.js"></script>
+    <script src="src/public/menu-item/menu-item.component.js"></script>
+
+    <!-- ADMIN SITE -->
+    <script src="src/admin/admin.module.js"></script>
+    <script src="src/admin/admin.routes.js"></script>
+    <script src="src/admin/admin-auth/admin-auth.controller.js"></script>
+    <script src="src/admin/services/login.service.js"></script>
+    <script src="src/admin/services/current-user.service.js"></script>
+    <script src="src/admin/services/authredirector.service.js"></script>
+    <script src="src/admin/auth.interceptor.js"></script>
+    <script src="src/admin/login/login.controller.js"></script>
+    <script src="src/admin/category/category-list.component.js"></script>
+    <script src="src/admin/category/category-items.controller.js"></script>
+    <script src="src/admin/menu-item/menu-item-edit.controller.js"></script>
+    <script src="src/admin/menu-item/menu-item-admin.component.js"></script>
+
+
+  
+
+
+</body></html>

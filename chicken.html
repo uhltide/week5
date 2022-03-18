@@ -1,0 +1,473 @@
+<html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Chu's China Bistro</title>
+    <link rel="icon" href="images/restaurant-logo-favicon.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/restaurant.css">
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+  <body ng-app="restaurant" ng-strict-di="" class="ng-scope">
+
+    <!-- Fixed position loading indicator -->
+    <loading class="loading-indicator ng-isolate-scope"><!-- ngIf: $ctrl.show --></loading>
+
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a href="index.html" class="pull-left visible-md visible-lg">
+              <div id="logo-img" alt="Logo image"></div>
+            </a>
+
+            <div class="navbar-brand">
+              <a href="index.html"><h1>David Chu's China Bistro</h1></a>
+              <p>
+              <img src="images/star-k-logo.png" alt="Kosher certification">
+              <span>Kosher Certified</span>
+              </p>
+            </div>
+
+            <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div id="collapsable-nav" class="collapse navbar-collapse">
+            <ul id="nav-list" class="nav navbar-nav navbar-right">
+              <li id="navHomeButton" class="visible-xs">
+                <a href="index.html">
+                  <span class="glyphicon glyphicon-home"></span> Home</a>
+              </li>
+              <li id="navMenuButton" ui-sref-active="active">
+                <a ui-sref="public.menu" href="#/menu">
+                  <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
+              </li>
+              <li>
+                <a ui-sref="public.about" href="#/about">
+                  <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+              </li>
+              <li>
+                <a ui-sref="public.awards" href="#/awards">
+                  <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
+              </li>
+              <li id="phone" class="hidden-xs">
+                <a href="tel:410-602-5008">
+                  <span>410-602-5008</span></a><div>* We Deliver</div>
+              </li>
+            </ul><!-- #nav-list -->
+          </div><!-- .collapse .navbar-collapse -->
+        </div><!-- .container -->
+      </nav><!-- #header-nav -->
+    </header>
+
+    <div id="call-btn" class="visible-xs">
+      <a class="btn" href="tel:410-602-5008">
+        <span class="glyphicon glyphicon-earphone"></span>
+        410-602-5008
+      </a>
+    </div>
+    <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+
+    <!-- uiView: --><ui-view class="ng-scope"><!--
+  Include stylesheet specific to the public site
+-->
+<link rel="stylesheet" href="css/public.css" class="ng-scope">
+
+<!-- uiView: --><ui-view class="ng-scope"><div class="container ng-scope">
+  <h2 id="menu-categories-title" class="text-center ng-binding">
+    Chicken Menu
+  </h2>
+  <div class="text-center ng-binding">
+    
+  </div>
+
+  <!-- ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C3</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C3.jpg" alt="White Meat Chicken with String Bean" src="https://www.davidchuschinabistro.com/images/C3.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">White Meat Chicken with String Bean</h3>
+      <p class="menu-item-details ng-binding">white meat chicken sauteed with string beans and soy sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C2</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C2.jpg" alt="General Tso's Chicken" src="https://www.davidchuschinabistro.com/images/C2.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">General Tso's Chicken</h3>
+      <p class="menu-item-details ng-binding">chunks of chicken, breaded and deep-fried with sauce and scallions; white meat by request and pay $1 extra for a pint and $2 for a large.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C1</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C1.jpg" alt="Orange Chicken" src="https://www.davidchuschinabistro.com/images/C1.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Orange Chicken</h3>
+      <p class="menu-item-details ng-binding">chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request and  $1 extra for a pint and $2 extra for a large.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C11</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C11.jpg" alt="White Meat Chicken with Garlic Sauce" src="https://www.davidchuschinabistro.com/images/C11.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">White Meat Chicken with Garlic Sauce</h3>
+      <p class="menu-item-details ng-binding">chicken sauteed with string beans, mushrooms, and waterchestnuts in garlic sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C6</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C6.jpg" alt="White Meat Chicken with Fresh Vegetables" src="https://www.davidchuschinabistro.com/images/C6.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">White Meat Chicken with Fresh Vegetables</h3>
+      <p class="menu-item-details ng-binding">white meat chicken in a clear white sauce sauteed with mixed vegetables</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C9</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C9.jpg" alt="Szechuan Chicken" src="https://www.davidchuschinabistro.com/images/C9.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Szechuan Chicken</h3>
+      <p class="menu-item-details ng-binding">white meat chicken sauteed with carrots, celery, and bean sprouts in Szechuan sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C15</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C15.jpg" alt="Sweet and Sour Chicken" src="https://www.davidchuschinabistro.com/images/C15.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Sweet and Sour Chicken</h3>
+      <p class="menu-item-details ng-binding">white meat chicken, breaded and fried with some green pepper, onion, and pineapples</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C7</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C7.jpg" alt="Sesame Chicken" src="https://www.davidchuschinabistro.com/images/C7.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Sesame Chicken</h3>
+      <p class="menu-item-details ng-binding">chunks of chicken, breaded and deep-fried with a sesame seed sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C19</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C19.jpg" alt="Salt &amp; Pepper Chicken" src="https://www.davidchuschinabistro.com/images/C19.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$15.95<span class="ng-binding"> pint</span> $19.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Salt &amp; Pepper Chicken</h3>
+      <p class="menu-item-details ng-binding">chunks of chicken breaded and fried, the sauteed with green peppers</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C14</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C14.jpg" alt="Moo Goo Gau Pan" src="https://www.davidchuschinabistro.com/images/C14.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Moo Goo Gau Pan</h3>
+      <p class="menu-item-details ng-binding">white meat chicken sauteed with broccoli, snow peas, mushrooms, and waterchestnuts in a white sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C17</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C17.jpg" alt="Lemon Chicken" src="https://www.davidchuschinabistro.com/images/C17.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$15.95<span class="ng-binding"> pint</span> $19.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Lemon Chicken</h3>
+      <p class="menu-item-details ng-binding">white meat chicken breaded and fried, served with lemon sauce on the side</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C10</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C10.jpg" alt="Kung Pao Chicken" src="https://www.davidchuschinabistro.com/images/C10.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Kung Pao Chicken</h3>
+      <p class="menu-item-details ng-binding">diced chicken sauteed with peanuts, and celery in delicious kung pao sauce; white meat by request and pay $1 extra for a pint and $2 extra for a large.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C8</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C8.jpg" alt="Hunan Chicken" src="https://www.davidchuschinabistro.com/images/C8.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Hunan Chicken</h3>
+      <p class="menu-item-details ng-binding">white meat chicken sauteed with broccoli, mushrooms, and baby corn in Hunan sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C18</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C18.jpg" alt="Eight Treasure Chicken" src="https://www.davidchuschinabistro.com/images/C18.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Eight Treasure Chicken</h3>
+      <p class="menu-item-details ng-binding">diced chicken sauteed with mushrooms, waterchestnuts, celery, peas, carrots, peanuts, and cahsews in a chef's sauce; white meat by request and pay $1 extra for a pint and $2 for a large.</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C16</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C16.jpg" alt="Chicken with Broccoli" src="https://www.davidchuschinabistro.com/images/C16.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Chicken with Broccoli</h3>
+      <p class="menu-item-details ng-binding">white meat chicken sauteed with broccoli in brown sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C12</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C12.jpg" alt="Dry Shredded Chicken" src="https://www.davidchuschinabistro.com/images/C12.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$15.95<span class="ng-binding"> pint</span> $19.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Dry Shredded Chicken</h3>
+      <p class="menu-item-details ng-binding">white meat chicken lightly breaded and fried until crip, then sauteed with celery and carrots in a special chef's sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C5</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C5.jpg" alt="Chicken Cashewnuts" src="https://www.davidchuschinabistro.com/images/C5.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Chicken Cashewnuts</h3>
+      <p class="menu-item-details ng-binding">diced chicken with waterchestnuts, green peppers, and celery, and cashewnuts; white meat by request: for pint $1 extra, for large $2 extra</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C4</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C4.jpg" alt="White Meat Chicken with Eggplant In Garlic Sauce" src="https://www.davidchuschinabistro.com/images/C4.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">White Meat Chicken with Eggplant In Garlic Sauce</h3>
+      <p class="menu-item-details ng-binding">white meat chicken, string beans, waterchestnuts, mushrooms, and eggplant, in garlic sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items --><menu-item ng-repeat="menuItem in menuItemsCtrl.menuItems.menu_items" menu-item="menuItem" class="ng-scope ng-isolate-scope"><div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div class="ng-binding">C13</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://www.davidchuschinabistro.com/images/C13.jpg" alt="Moo Shu Chicken" src="https://www.davidchuschinabistro.com/images/C13.jpg">
+      </div>
+      <div class="menu-item-price ng-binding">$14.95<span class="ng-binding"> pint</span> $18.95 <span class="ng-binding">large</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title ng-binding">Moo Shu Chicken</h3>
+      <p class="menu-item-details ng-binding">white meat chicken sauteed with shredded cabbage, mushrooms and eggs, then wrapped with pancake and delicious plum sauce</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+</menu-item><!-- end ngRepeat: menuItem in menuItemsCtrl.menuItems.menu_items -->
+
+
+</div>
+</ui-view>
+</ui-view>
+
+    <footer class="panel-footer">
+      <div class="container">
+        <div class="row">
+          <section id="hours" class="col-sm-4">
+            <span>Hours:</span><br>
+            Sun-Thurs: 11:15am - 10:00pm<br>
+            Fri: 11:15am - 2:30pm<br>
+            Saturday Closed
+            <hr class="visible-xs">
+          </section>
+          <section id="address" class="col-sm-4">
+            <span>Address:</span><br>
+            7105 Reisterstown Road<br>
+            Baltimore, MD 21215
+            <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+            <hr class="visible-xs">
+          </section>
+          <section id="testimonials" class="col-sm-4">
+            <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+            <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+          </section>
+        </div>
+        <div class="text-center">
+          © Copyright David Chu's China Bistro 2016 |
+          <a ui-sref="admin.auth" href="#/admin">Admin</a></div>
+      </div>
+    </footer>
+
+    <!-- Libs -->
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="lib/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="lib/ng-file-upload/ng-file-upload.min.js"></script>
+
+    <!-- Main Restaurant Module -->
+    <script src="src/restaurant.module.js"></script>
+
+    <!-- Common Module -->
+    <script src="src/common/common.module.js"></script>
+    <script src="src/common/loading/loading.component.js"></script>
+    <script src="src/common/loading/loading.interceptor.js"></script>
+    <script src="src/common/menu.service.js"></script>
+
+    <!-- Public Module -->
+    <script src="src/public/public.module.js"></script>
+    <script src="src/public/public.routes.js"></script>
+    <script src="src/public/menu/menu.controller.js"></script>
+    <script src="src/public/menu-category/menu-category.component.js"></script>
+    <script src="src/public/menu-items/menu-items.controller.js"></script>
+    <script src="src/public/menu-item/menu-item.component.js"></script>
+
+    <!-- ADMIN SITE -->
+    <script src="src/admin/admin.module.js"></script>
+    <script src="src/admin/admin.routes.js"></script>
+    <script src="src/admin/admin-auth/admin-auth.controller.js"></script>
+    <script src="src/admin/services/login.service.js"></script>
+    <script src="src/admin/services/current-user.service.js"></script>
+    <script src="src/admin/services/authredirector.service.js"></script>
+    <script src="src/admin/auth.interceptor.js"></script>
+    <script src="src/admin/login/login.controller.js"></script>
+    <script src="src/admin/category/category-list.component.js"></script>
+    <script src="src/admin/category/category-items.controller.js"></script>
+    <script src="src/admin/menu-item/menu-item-edit.controller.js"></script>
+    <script src="src/admin/menu-item/menu-item-admin.component.js"></script>
+
+
+  
+
+
+</body></html>
